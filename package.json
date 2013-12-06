@@ -1,0 +1,10 @@
+{
+	"name": "Node.js-training",
+	"version": "1.0",
+	"private": true,
+	"dependencies": {
+		"nodegrass": ">= 0.0.3",
+		"redis": ">= 0.9.1",
+		"querystring": ">= 0.2.0",	
+	}
+}
