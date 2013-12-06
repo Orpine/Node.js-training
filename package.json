@@ -1,10 +1,9 @@
 {
 	"name": "Node.js-training",
-	"version": "1.0",
+	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
 		"nodegrass": ">= 0.0.3",
-		"redis": ">= 0.9.1",
-		"querystring": ">= 0.2.0",	
+		"redis": ">= 0.9.1"
 	}
 }
