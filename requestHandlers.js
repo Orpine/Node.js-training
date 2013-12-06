@@ -7,8 +7,8 @@ var fs = require("fs");
 function start(res) {
 	console.log("Request handler 'start' was called.");
 
-    res.writeHead(200, {"Content-Type": "text/html"});
-    res.end();
+	res.writeHead(200, {"Content-Type": "text/html"});
+	res.end();
 
 }
 
@@ -28,9 +28,9 @@ function redisHmset(postData, urlData, callback) {
 				} else {
 					console.log(res);
 				}
-	            if (typeof callback == 'function') {
-		            callback(postData);
-	            }
+				if (typeof callback == 'function') {
+					callback(postData);
+				}
 			});
 		}
 	});
@@ -42,20 +42,20 @@ function redisHmget(info, key, callback) {
 	});
 
 	client.select('1', function(error){
-	    if(error) {
-	        console.log(error);
-	    } else {
-	        client.hmget(info, key, function(error, res){
-	            if(error) {
-	                console.log(error);
-	            } else {
-	                console.log(res);   
-	            }
-	            if (typeof callback == 'function') {
-			        callback(res);	            
-	            }
-	        });
-	    }
+		if(error) {
+			console.log(error);
+		} else {
+			client.hmget(info, key, function(error, res){
+				if(error) {
+					console.log(error);
+				} else {
+					console.log(res);   
+				}
+				if (typeof callback == 'function') {
+					callback(res);				
+				}
+			});
+		}
 	});
 }
 
