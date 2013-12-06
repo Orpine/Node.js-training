@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<title>
+		Orpine's demo
+	</title>
+	<script type="text/javascript">
+		function formSubmit() {
+			document.getElementById("stuForm").submit();
+		}
+	</script>
+</head>
+<body>
+<!--	<iframe style="display: none;" name="a"></iframe> -->
+	<form id="stuForm" action="http://localhost:8080/upload" method="post"> <!-- target="a"> -->
+		Name:<input name="stuName" type="text"/>
+		ID:<input name="stuNum" type="text"/><br/>
+		URL:<br/>
+		<textarea name="stuUrl" rows="5" cols="45"></textarea>
+		<br/>
+		<input id="sendButton" type="button" onclick="formSubmit()" value="Send"/>
+	</form>
+</body>
+</html>
